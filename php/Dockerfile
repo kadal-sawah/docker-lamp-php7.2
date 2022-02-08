@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libjpeg62-turbo-dev \
     libpng-dev \
     libxml2-dev \
-    mysql-client \
+    mariadb-client \
     unzip \
     git \
     locales \

@@ -1,6 +1,7 @@
 version: '2.1'
 services:
   php:
+    mem_limit: 512m
     hostname: php
     build: ./php
     depends_on:
@@ -19,6 +20,7 @@ services:
     ports:
       - "8080:80"
   db:
+    mem_limit: 512m
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -31,6 +33,7 @@ services:
     ports:
       - "8181:3306"
   phpmyadmin:
+    mem_limit: 128m
     image: phpmyadmin/phpmyadmin
     depends_on:
       - db
